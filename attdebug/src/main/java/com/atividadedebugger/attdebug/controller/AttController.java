@@ -11,10 +11,10 @@ import java.util.List;
 public class AttController {
     
    
-    private ProdutoService produtoService;
+    private AttService produtoService;
     
     @GetMapping
-    public List<Produto> listarTodos() {
+    public List<AttModel> listarTodos() {
         return produtoService.listarTodos();
     }
     
