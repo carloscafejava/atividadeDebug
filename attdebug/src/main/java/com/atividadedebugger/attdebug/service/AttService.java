@@ -1,27 +1,26 @@
 package com.atividadedebugger.attdebug.service;
 
-
-
-import com.example.model.Produto;
+import com.atividadedebugger.attdebug.model.AttModel;
 import java.util.ArrayList;
 import java.util.List;
+import org.springframework.stereotype.Service;
 
-
+@Service
 public class AttService {
     
-    private List<Produto> produtos = new ArrayList<>();
+    private List<AttModel> produtos = new ArrayList<>();
     
-    public ProdutoService() {
-        produtos.add(new Produto(1, "Notebook", 2500.00));
-        produtos.add(new Produto(2, "Mouse", 50.00));
+    public AttService() {
+        produtos.add(new AttModel(1, "Notebook", 2500.00));
+        produtos.add(new AttModel(2, "Mouse", 50.00));
     }
     
-    public List<Produto> listarTodos() {
+    public List<AttModel> listarTodos() {
         return produtos;
     }
     
-    public Produto buscarPorId(int id) {
-        for (Produto p : produtos) {
+    public AttModel buscarPorId(int id) {
+        for (AttModel p : produtos) {
             if (p.getId() == id) {
                 return p;
             }
@@ -29,7 +28,7 @@ public class AttService {
         return null;
     }
     
-    public void adicionarProduto(Produto produto) {
+    public void adicionarProduto(AttModel produto) {
       
         produtos.add(produto);
         produtos.add(produto);
@@ -37,7 +36,7 @@ public class AttService {
     
     public double calcularValorTotal() {
         double total = 0;
-        for (Produto p : produtos) {
+        for (AttModel p : produtos) {
             total += p.getPreco();
         }
         return total;

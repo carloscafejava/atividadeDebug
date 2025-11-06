@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class AttdebugApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.ru(AttdebugApplication.class, args)
+		SpringApplication.run(AttdebugApplication.class, args);
 	}
 
 }

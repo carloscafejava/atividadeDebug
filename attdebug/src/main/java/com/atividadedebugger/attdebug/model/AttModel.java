@@ -1,19 +1,16 @@
 package com.atividadedebugger.attdebug.model;
 
 
-@Service
 public class AttModel {
     private int id;
     private String nome;
-    private double preco;
+    private Double preco;
     
-     public Produto() {
-        this.id = id;
-        this.nome = nome;
-        this.preco = preco;
+     public AttModel() {
+
     }
 
-    public Produto(int id, String nome) {
+    public AttModel(int id, String nome, Double preco) {
         this.id = id;
         this.nome = nome;
         this.preco = preco;
@@ -42,6 +39,10 @@ public class AttModel {
     
     public double getPreco() {
         return preco;
+    }
+
+    public void setPreco(double preco) {
+        this.preco = preco;
     }
     
     
