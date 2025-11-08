@@ -1,13 +1,22 @@
 package com.atividadedebugger.attdebug.model;
 
+import jakarta.persistence.*;
 
+@Entity
+@Table(name = "produtos")
 public class AttModel {
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    
+    @Column(nullable = false, length = 100)
     private String nome;
+    
+    @Column(nullable = false)
     private Double preco;
     
-     public AttModel() {
-
+    public AttModel() {
     }
 
     public AttModel(int id, String nome, Double preco) {
@@ -15,12 +24,7 @@ public class AttModel {
         this.nome = nome;
         this.preco = preco;
     }
-    
 
-    public void setPreco(String preco) {
-        this.preco = Double.parseDouble(preco);
-    }
-    
     public int getId() {
         return id;
     }
@@ -45,5 +49,7 @@ public class AttModel {
         this.preco = preco;
     }
     
-    
+    public void setPreco(String preco) {
+        this.preco = Double.parseDouble(preco);
+    }
 }

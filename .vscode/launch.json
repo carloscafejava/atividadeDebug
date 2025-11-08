@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-AttdebugApplication<attdebug>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.atividadedebugger.attdebug.AttdebugApplication",
+            "projectName": "attdebug",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
